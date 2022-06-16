@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerHeight / 1.6;
+canvas.height = canvas.width;
 
 ctx.font = "14px serif";
 ctx.fillStyle = "#000";
