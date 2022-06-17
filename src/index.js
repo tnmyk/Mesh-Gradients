@@ -12,7 +12,7 @@ function random_rgb() {
     s = 255;
   return [o(r() * s), o(r() * s), o(r() * s)];
 }
-const particles = new Array(14).fill(0).map((_) => {
+const particles = new Array(25).fill(0).map((_) => {
   return {
     x: canvas.width * Math.random(),
     y: canvas.height * Math.random(),
@@ -20,7 +20,7 @@ const particles = new Array(14).fill(0).map((_) => {
     hsl: [~~(360 * Math.random()), 70, 80],
     vx: 2 * Math.random(),
     vy: 7 * Math.random(),
-    radius: Math.max(350, Math.random() * 500),
+    radius: Math.max(600, Math.random() * 700),
   };
 });
 
@@ -47,8 +47,16 @@ const draw = () => {
     ctx.fill();
 
     // particle.radius = particle.radius
-    if (particle.x >= canvas.width || particle.x < 0) particle.vx *= -1;
-    if (particle.y >= canvas.height || particle.y < 0) particle.vy *= -1;
+    if (
+      particle.x - particle.radius / 2 >= canvas.width ||
+      particle.x + particle.radius / 2 < 0
+    )
+      particle.vx *= -1;
+    if (
+      particle.y - particle.radius / 2 >= canvas.height ||
+      particle.y + particle.radius / 2 < 0
+    )
+      particle.vy *= -1;
     particle.x += particle.vx;
     particle.y += particle.vy;
   });
