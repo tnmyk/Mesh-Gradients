@@ -12,7 +12,6 @@ body {
   flex-direction: column;
   height: 100vh;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
@@ -34,7 +33,7 @@ nav {
   column-gap: 1rem;
   font-size: 1rem;
 }
-.buttons-container button {
+button {
   all: unset;
   background-color: white;
   border-radius: 30px;
