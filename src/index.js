@@ -16,7 +16,8 @@ const particles = new Array(14).fill(0).map((_) => {
   return {
     x: canvas.width * Math.random(),
     y: canvas.height * Math.random(),
-    rgb: random_rgb(),
+    // rgb: random_rgb(),
+    hsl: [~~(360 * Math.random()), 70, 80],
     vx: 2 * Math.random(),
     vy: 7 * Math.random(),
     radius: Math.max(350, Math.random() * 500),
@@ -37,9 +38,9 @@ const draw = () => {
       particle.y,
       particle.radius
     );
-    const [r, g, b] = particle.rgb;
-    grad.addColorStop(0, `rgba(${r},${g},${b},1)`);
-    grad.addColorStop(1, `rgba(${r},${g},${b},0)`);
+    const [h, s, l] = particle.hsl;
+    grad.addColorStop(0, `hsla(${h},${s}%,${l}%,1)`);
+    grad.addColorStop(1, `hsla(${h},${s}%,${l}%,0)`);
     ctx.beginPath();
     ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
     ctx.fillStyle = grad;
