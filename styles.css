@@ -9,17 +9,41 @@
 body {
   background-color: black;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   align-items: center;
-  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.7rem;
+  margin-bottom: 2rem;
+}
+
 #canvas {
   display: block;
   background-color: black;
-  border: 1px solid whitesmoke;
+}
 
-  /* Required to use 'pointermove' event in mobile devices  */
-  /* touch-action: none; */
+.buttons-container {
+  margin-top: 1rem;
+  display: flex;
+  column-gap: 1rem;
+  font-size: 1rem;
+}
+.buttons-container button {
+  all: unset;
+  background-color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  min-width: 5rem;
+  text-align: center;
 }
 
 kbd {
