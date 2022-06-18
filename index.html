@@ -4,22 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canvas Starter</title>
+    <title>Mesh Gradients</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav>
-      <div>Canvas Gradients</div>
+      <div>Mesh Gradients</div>
       <a target="_blank" href="https://github.com/tnmyk/canvas-gradients"
         >Github
       </a>
     </nav>
     <canvas id="canvas"></canvas>
     <div class="buttons-container">
-      <button id="download">Download .PNG</button>
-      <button id="randomize">Randomize</button>
-      <button id="shuffle">Shuffle</button>
+      <button id="download">
+        Download
+        <ion-icon name="download-outline"></ion-icon>
+      </button>
+      <button id="randomize">
+        Randomize
+        <ion-icon name="dice-outline"></ion-icon>
+      </button>
+      <button id="shuffle">
+        Shuffle
+        <ion-icon name="shuffle-outline"></ion-icon>
+      </button>
     </div>
+    <div class="select-container">
+      <label for="comp-op">Composite Operation</label>
+      <select name="comp-op" id="composite-operation">
+        <option value="saturation">Saturation</option>
+        <option value="source-over">Source Over</option>
+        <option value="destination-over">Destination Over</option>
+        <option value="multiply">Multiply</option>
+        <option value="color-burn">Color Burn</option>
+        <option value="difference">Difference</option>
+      </select>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
   <script type="module" src="./src/index.js"></script>
 </html>
