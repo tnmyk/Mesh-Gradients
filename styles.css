@@ -2,11 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #eee;
   font-family: monospace;
 }
 
+a {
+  color: inherit;
+}
+
 body {
+  color: #eee;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@ nav {
   justify-content: space-between;
   padding: 1.7rem;
   margin-bottom: 2rem;
+  color: #f3c5ff;
 }
 
 #canvas {
@@ -33,6 +38,7 @@ nav {
   column-gap: 1rem;
   font-size: 1rem;
 }
+
 button {
   all: unset;
   background-color: white;
@@ -45,6 +51,7 @@ button {
   text-align: center;
 }
 
+/* If kbd added later */
 kbd {
   background-color: #eee;
   border-radius: 3px;

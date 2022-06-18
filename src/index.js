@@ -15,6 +15,10 @@ const download = () => {
   link.href = canvas.toDataURL();
   link.click();
 };
+
+document.querySelector("nav").style.color = `hsla(${~~(
+  360 * Math.random()
+)}, 70%, 85%)`;
 document.getElementById("download").addEventListener("click", download);
 
 document.getElementById("randomize").addEventListener("click", () => {
