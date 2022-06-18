@@ -14,8 +14,8 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 nav {
@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1.7rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #f3c5ff;
 }
 
@@ -39,6 +39,10 @@ nav {
   font-size: 1rem;
 }
 
+.select-container {
+  margin-top: 1rem;
+}
+
 button {
   all: unset;
   background-color: white;
@@ -47,8 +51,15 @@ button {
   color: black;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  min-width: 5rem;
+  min-width: 6rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+ion-icon {
+  font-size: 1.4rem;
 }
 
 /* If kbd added later */

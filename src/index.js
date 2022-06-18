@@ -19,6 +19,7 @@ const download = () => {
 document.querySelector("nav").style.color = `hsla(${~~(
   360 * Math.random()
 )}, 70%, 85%)`;
+
 document.getElementById("download").addEventListener("click", download);
 
 document.getElementById("randomize").addEventListener("click", () => {
@@ -26,6 +27,12 @@ document.getElementById("randomize").addEventListener("click", () => {
 });
 
 document.getElementById("shuffle").addEventListener("click", shuffle);
+
+document
+  .getElementById("composite-operation")
+  .addEventListener("change", (e) => {
+    context.globalCompositeOperation = e.target.value;
+  });
 
 generateParticles(canvas, 25);
 requestAnimationFrame(animate);
