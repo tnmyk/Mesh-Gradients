@@ -7,7 +7,7 @@ export const generateParticles = (canvas, numberOfParticles) => {
     return {
       ...randomLocation(),
       hsl: [~~(360 * Math.random()), 70, 80],
-      vx: 2 * (Math.random() - 0.5) * 2,
+      vx: 7 * (Math.random() - 0.5) * 2,
       vy: 7 * (Math.random() - 0.5) * 2,
       radius: Math.max(600, Math.random() * 650),
     };
