@@ -23,7 +23,7 @@ document.querySelector("nav").style.color = `hsla(${~~(
 document.getElementById("download").addEventListener("click", download);
 
 document.getElementById("randomize").addEventListener("click", () => {
-  generateParticles(canvas, 25);
+  generateParticles(25);
 });
 
 document.getElementById("shuffle").addEventListener("click", shuffle);
@@ -34,7 +34,7 @@ document
     context.globalCompositeOperation = e.target.value;
   });
 
-generateParticles(canvas, 25);
+generateParticles(25);
 requestAnimationFrame(animate);
 function animate() {
   // request another loop of animation

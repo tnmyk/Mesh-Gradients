@@ -2,14 +2,15 @@ let particles = [];
 const randomLocation = () => {
   return { x: canvas.width * Math.random(), y: canvas.height * Math.random() };
 };
-export const generateParticles = (canvas, numberOfParticles) => {
+const randomRadius = () => Math.max(600, Math.random() * 650);
+export const generateParticles = (numberOfParticles) => {
   particles = new Array(numberOfParticles).fill(0).map((_) => {
     return {
       ...randomLocation(),
       hsl: [~~(360 * Math.random()), 70, 80],
-      vx: 7 * (Math.random() - 0.5) * 2,
+      vx: 4 * (Math.random() - 0.5) * 2,
       vy: 7 * (Math.random() - 0.5) * 2,
-      radius: Math.max(600, Math.random() * 650),
+      radius: randomRadius(),
     };
   });
 };
@@ -55,6 +56,6 @@ export const shuffle = () => {
     const { x, y } = randomLocation();
     particle.x = x;
     particle.y = y;
-    particle.radius = Math.max(600, Math.random() * 650);
+    particle.radius = randomRadius();
   });
 };
